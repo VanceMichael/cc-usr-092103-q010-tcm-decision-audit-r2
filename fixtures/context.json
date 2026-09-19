@@ -1,0 +1,10 @@
+{
+  "domain": "tcm-decision-audit",
+  "version": 1,
+  "facts": [
+    "模型将部署到多院区和医联体",
+    "名医经验用于临床辅助",
+    "临床、科研和人才培养用途需要区分"
+  ],
+  "sample_id": "sample-010"
+}
