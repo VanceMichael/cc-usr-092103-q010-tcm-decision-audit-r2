@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "推理请求（脱敏最小特征）",
+  "type": "object",
+  "required": ["domain", "request_id", "institution_id", "doctor_id", "patient_pseudonym", "disease_code", "features"],
+  "properties": {
+    "domain": {"type": "string", "minLength": 1},
+    "request_id": {"type": "string", "minLength": 1},
+    "institution_id": {"type": "string", "minLength": 1},
+    "doctor_id": {"type": "string", "minLength": 1},
+    "patient_pseudonym": {"type": "string", "minLength": 1},
+    "disease_code": {"type": "string", "minLength": 1},
+    "features": {
+      "type": "object",
+      "required": ["pattern_code"],
+      "properties": {
+        "pattern_code": {"type": "string", "minLength": 1},
+        "symptoms": {"type": "array", "items": {"type": "string"}},
+        "tongue": {"type": "string"},
+        "pulse": {"type": "string"},
+        "age_band": {"type": "string"},
+        "sex": {"type": "string"},
+        "course_days": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false,
+      "not": {
+        "anyOf": [
+          {"required": ["name"]},
+          {"required": ["id_number"]},
+          {"required": ["phone"]},
+          {"required": ["address"]},
+          {"required": ["email"]},
+          {"required": ["medical_record_no"]},
+          {"required": ["insurance_no"]},
+          {"required": ["face_image"]}
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

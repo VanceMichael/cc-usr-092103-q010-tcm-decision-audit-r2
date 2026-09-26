@@ -1,0 +1,74 @@
+{
+  "domain": "tcm-decision-audit",
+  "version": 1,
+  "institutions": [
+    {
+      "id": "LH",
+      "name": "龙华医院",
+      "tier": "总院",
+      "parent": null,
+      "registrations": []
+    },
+    {
+      "id": "LH-XH",
+      "name": "龙华医院徐汇院区",
+      "tier": "院区",
+      "parent": "LH",
+      "registrations": [
+        {
+          "model_version": "fz-1.0",
+          "diseases": ["DIS-GM", "DIS-ZF"],
+          "effective_from": "2025-06-01T00:00:00Z",
+          "deactivate_if": {"after": "2026-06-01T00:00:00Z", "adverse_events_at_least": 5}
+        },
+        {
+          "model_version": "fz-2.0",
+          "diseases": ["DIS-GM", "DIS-ZF"],
+          "effective_from": "2026-03-15T00:00:00Z",
+          "deactivate_if": {"adverse_events_at_least": 3}
+        }
+      ]
+    },
+    {
+      "id": "LH-PD",
+      "name": "龙华医院浦东院区",
+      "tier": "院区",
+      "parent": "LH",
+      "registrations": [
+        {
+          "model_version": "fz-1.0",
+          "diseases": ["DIS-GM"],
+          "effective_from": "2025-06-01T00:00:00Z",
+          "deactivate_if": {"after": "2026-05-01T00:00:00Z"}
+        }
+      ]
+    },
+    {
+      "id": "RMC-JA",
+      "name": "静安区域医疗中心",
+      "tier": "区域医疗中心",
+      "parent": null,
+      "registrations": [
+        {
+          "model_version": "fz-1.0",
+          "diseases": ["DIS-GM"],
+          "effective_from": "2025-09-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "CHS-CF",
+      "name": "长风社区卫生服务中心",
+      "tier": "医联体",
+      "parent": "RMC-JA",
+      "registrations": [
+        {
+          "model_version": "fz-1.0",
+          "diseases": ["DIS-GM"],
+          "effective_from": "2025-09-01T00:00:00Z",
+          "deactivate_if": {"after": "2026-12-31T00:00:00Z", "adverse_events_at_least": 2}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "domain": "tcm-decision-audit",
+  "version": 1,
+  "models": [
+    {
+      "version": "fz-1.0",
+      "released_at": "2025-06-01T00:00:00Z",
+      "rules": [
+        {"disease_code": "DIS-GM", "pattern_code": "PT-FHRB", "formula_code": "FM-YQS", "experience_code": "EXP-GU", "experience_version": 1},
+        {"disease_code": "DIS-GM", "pattern_code": "PT-FHSB", "formula_code": "FM-GZT", "experience_code": "EXP-GU", "experience_version": 1},
+        {"disease_code": "DIS-ZF", "pattern_code": "PT-QXYY", "formula_code": "FM-BYHWT", "experience_code": "EXP-ZHANG", "experience_version": 1}
+      ]
+    },
+    {
+      "version": "fz-2.0",
+      "released_at": "2026-03-15T00:00:00Z",
+      "rules": [
+        {"disease_code": "DIS-GM", "pattern_code": "PT-FHRB", "formula_code": "FM-YQSJJ", "experience_code": "EXP-GU", "experience_version": 2},
+        {"disease_code": "DIS-GM", "pattern_code": "PT-FHSB", "formula_code": "FM-GZT", "experience_code": "EXP-GU", "experience_version": 2},
+        {"disease_code": "DIS-ZF", "pattern_code": "PT-QXYY", "formula_code": "FM-BYHWT", "experience_code": "EXP-ZHANG", "experience_version": 1}
+      ]
+    }
+  ]
+}

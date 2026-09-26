@@ -1,0 +1,36 @@
+{
+  "domain": "tcm-decision-audit",
+  "version": 1,
+  "roles": [
+    {
+      "id": "physician",
+      "name": "执业医师",
+      "permissions": ["infer", "dispose:own", "adverse:report", "consult:request"]
+    },
+    {
+      "id": "senior_physician",
+      "name": "主任医师",
+      "permissions": ["infer", "dispose:own", "dispose:review", "adverse:report", "consult:request", "consult:resolve"]
+    },
+    {
+      "id": "auditor",
+      "name": "审计员",
+      "permissions": ["audit:replay", "audit:read"]
+    },
+    {
+      "id": "researcher",
+      "name": "科研人员",
+      "permissions": ["research:export"]
+    },
+    {
+      "id": "org_admin",
+      "name": "机构管理员",
+      "permissions": ["registry:manage", "gray:manage"]
+    },
+    {
+      "id": "patient",
+      "name": "患者",
+      "permissions": ["view:own", "consent:manage"]
+    }
+  ]
+}

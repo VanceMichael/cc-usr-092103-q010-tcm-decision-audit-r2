@@ -1,0 +1,17 @@
+{
+  "domain": "tcm-decision-audit",
+  "request_id": "req-2026-04-01-0001",
+  "institution_id": "LH-XH",
+  "doctor_id": "doc-017",
+  "patient_pseudonym": "pat-9f3c",
+  "disease_code": "DIS-GM",
+  "features": {
+    "pattern_code": "PT-FHRB",
+    "symptoms": ["发热", "咽痛"],
+    "tongue": "舌红苔薄黄",
+    "pulse": "浮数",
+    "age_band": "30-39",
+    "sex": "女",
+    "course_days": 2
+  }
+}

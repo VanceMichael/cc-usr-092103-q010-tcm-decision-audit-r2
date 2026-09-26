@@ -1,0 +1,42 @@
+{
+  "domain": "tcm-decision-audit",
+  "version": 1,
+  "patterns": [
+    {"code": "PT-FHRB", "name": "风热犯表证"},
+    {"code": "PT-FHSB", "name": "风寒束表证"},
+    {"code": "PT-QXYY", "name": "气虚血瘀证"}
+  ],
+  "formulas": [
+    {"code": "FM-YQS", "name": "银翘散"},
+    {"code": "FM-YQSJJ", "name": "银翘散加减"},
+    {"code": "FM-GZT", "name": "桂枝汤"},
+    {"code": "FM-BYHWT", "name": "补阳还五汤"}
+  ],
+  "diseases": [
+    {"code": "DIS-GM", "name": "感冒"},
+    {"code": "DIS-ZF", "name": "中风恢复期"}
+  ],
+  "experiences": [
+    {
+      "code": "EXP-GU",
+      "name": "顾氏外感热病诊疗经验",
+      "version": 1,
+      "effective_from": "2025-01-01T00:00:00Z",
+      "summary": "风热犯表以银翘散为主方"
+    },
+    {
+      "code": "EXP-GU",
+      "name": "顾氏外感热病诊疗经验",
+      "version": 2,
+      "effective_from": "2026-03-01T00:00:00Z",
+      "summary": "风热犯表兼咽痛者以银翘散加减化裁"
+    },
+    {
+      "code": "EXP-ZHANG",
+      "name": "张氏脾胃病诊疗经验",
+      "version": 1,
+      "effective_from": "2025-01-01T00:00:00Z",
+      "summary": "气虚血瘀以补阳还五汤化裁"
+    }
+  ]
+}
