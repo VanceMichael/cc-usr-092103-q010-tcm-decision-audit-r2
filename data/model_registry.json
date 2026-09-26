@@ -1,0 +1,56 @@
+{
+  "schema": "tcm-audit/model-registry/v1",
+  "updated_at": "2026-09-01",
+  "models": [
+    {
+      "model_uid": "model-fz-assist",
+      "name": "方证辅助诊疗模型",
+      "versions": [
+        {
+          "version": "1.4.0",
+          "released_on": "2026-03-15",
+          "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+          "terminology_version": "tcm-audit/formulary-pattern/v1",
+          "experience_source_codes": ["EXP-SCH-001"],
+          "status": "active",
+          "input_contract": "tcm-audit/minimal-features/v1",
+          "deterministic": true,
+          "decommission": null
+        },
+        {
+          "version": "1.5.0",
+          "released_on": "2026-08-01",
+          "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+          "terminology_version": "tcm-audit/formulary-pattern/v1",
+          "experience_source_codes": ["EXP-SCH-001", "EXP-LZH-002"],
+          "status": "active",
+          "input_contract": "tcm-audit/minimal-features/v1",
+          "deterministic": true,
+          "decommission": null
+        },
+        {
+          "version": "1.6.0-rc1",
+          "released_on": "2026-09-10",
+          "manifest_digest": "sha256:9f8e7d6c5b4a39281706f5e4d3c2b1a09988776655443322110f0e0d0c0b0a09",
+          "terminology_version": "tcm-audit/formulary-pattern/v1",
+          "experience_source_codes": ["EXP-SCH-001", "EXP-LZH-002"],
+          "status": "candidate",
+          "input_contract": "tcm-audit/minimal-features/v1",
+          "deterministic": true,
+          "decommission": null
+        }
+      ]
+    }
+  ],
+  "registrations": [
+    {"org_id": "ORG-LONGHUA", "model_uid": "model-fz-assist", "approved_version": "1.5.0", "allowed_versions": ["1.4.0", "1.5.0"], "disease_scope": ["DIS-COPD", "DIS-LC"], "canary": {"new_version": "1.6.0-rc1", "percent": 10, "enabled": true}, "approval_ref": "院字2026-医-031", "stops_if": ["撤回授权", "不良结果阈值触发", "医务处停用", "版本过适用病种范围"]},
+    {"org_id": "ORG-LH-XJH", "model_uid": "model-fz-assist", "approved_version": "1.5.0", "allowed_versions": ["1.4.0", "1.5.0"], "disease_scope": ["DIS-COPD", "DIS-LC"], "canary": {"new_version": "1.6.0-rc1", "percent": 10, "enabled": true}, "approval_ref": "院字2026-医-031", "stops_if": ["总院停用则院区联动停用", "撤回授权", "不良结果阈值触发"]},
+    {"org_id": "ORG-LH-PD", "model_uid": "model-fz-assist", "approved_version": "1.5.0", "allowed_versions": ["1.4.0", "1.5.0"], "disease_scope": ["DIS-COPD"], "canary": null, "approval_ref": "院字2026-医-031", "stops_if": ["肺癌病种未在浦东院区获准", "撤回授权", "不良结果阈值触发"]},
+    {"org_id": "ORG-LH-HK", "model_uid": "model-fz-assist", "approved_version": "1.5.0", "allowed_versions": ["1.5.0"], "disease_scope": ["DIS-COPD"], "canary": null, "approval_ref": "院字2026-医-042", "stops_if": ["撤回授权", "不良结果阈值触发"]},
+    {"org_id": "ORG-LH-MH", "model_uid": "model-fz-assist", "approved_version": "1.4.0", "allowed_versions": ["1.4.0"], "disease_scope": ["DIS-COPD"], "canary": null, "approval_ref": "院字2026-医-018", "stops_if": ["版本未获升级批准前不得使用1.5.0", "撤回授权"]},
+    {"org_id": "ORG-PDTCM", "model_uid": "model-fz-assist", "approved_version": "1.4.0", "allowed_versions": ["1.4.0"], "disease_scope": ["DIS-COPD"], "canary": null, "approval_ref": "浦中医2026-07", "stops_if": ["医联体协议失效", "撤回授权", "不良结果阈值触发", "区域中心停用则下属站点联动停用（站点不单独登记，沿层级继承）"]},
+    {"org_id": "ORG-XHCH", "model_uid": "model-fz-assist", "approved_version": "1.4.0", "allowed_versions": ["1.4.0"], "disease_scope": ["DIS-COPD"], "canary": null, "approval_ref": "医联体协议龙联体2026-02", "stops_if": ["医联体协议失效", "仅可在医联体授权清单内使用"]},
+    {"org_id": "ORG-XHALL", "model_uid": "model-fz-assist", "approved_version": null, "allowed_versions": [], "disease_scope": [], "canary": null, "approval_ref": null, "stops_if": ["医联体理事会本身不直接调用模型"]}
+  ],
+  "note": "allowed_versions 为该机构获准可用版本集合；approved_version 为默认版本；canary 仅在总院/徐汇院区对慢阻肺与肺癌开放10%灰度，且灰度版本不出现在跨院会诊中。"
+}

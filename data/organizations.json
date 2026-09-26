@@ -1,0 +1,80 @@
+{
+  "schema": "tcm-audit/organizations/v1",
+  "updated_at": "2026-09-01",
+  "organizations": [
+    {
+      "org_id": "ORG-LONGHUA",
+      "name": "上海中医药大学附属龙华医院",
+      "level": "tertiary_tcm_hospital",
+      "parent_id": null,
+      "org_type": "headquarters",
+      "campus": "总院",
+      "aliases": ["龙华", "龙华总院"]
+    },
+    {
+      "org_id": "ORG-LH-XJH",
+      "name": "龙华医院徐汇院区",
+      "level": "tertiary_tcm_hospital",
+      "parent_id": "ORG-LONGHUA",
+      "org_type": "campus",
+      "campus": "徐汇院区"
+    },
+    {
+      "org_id": "ORG-LH-PD",
+      "name": "龙华医院浦东院区（上南院区）",
+      "level": "tertiary_tcm_hospital",
+      "parent_id": "ORG-LONGHUA",
+      "org_type": "campus",
+      "campus": "浦东院区"
+    },
+    {
+      "org_id": "ORG-LH-HK",
+      "name": "龙华医院航头院区",
+      "level": "tertiary_tcm_hospital",
+      "parent_id": "ORG-LONGHUA",
+      "org_type": "campus",
+      "campus": "航头院区"
+    },
+    {
+      "org_id": "ORG-LH-MH",
+      "name": "龙华医院梅陇院区",
+      "level": "tertiary_tcm_hospital",
+      "parent_id": "ORG-LONGHUA",
+      "org_type": "campus",
+      "campus": "梅陇院区"
+    },
+    {
+      "org_id": "ORG-PDTCM",
+      "name": "浦东新区中医医院",
+      "level": "district_tcm_hospital",
+      "parent_id": null,
+      "org_type": "regional_center",
+      "campus": null
+    },
+    {
+      "org_id": "ORG-PDTCM-CY",
+      "name": "浦东新区中医医院曹园门诊部",
+      "level": "community_tcm_clinic",
+      "parent_id": "ORG-PDTCM",
+      "org_type": "regional_site",
+      "campus": null
+    },
+    {
+      "org_id": "ORG-XHCH",
+      "name": "徐汇区大华医院中医科",
+      "level": "community_tcm_clinic",
+      "parent_id": "ORG-XHALL",
+      "org_type": "alliance_member",
+      "campus": null
+    },
+    {
+      "org_id": "ORG-XHALL",
+      "name": "龙华中医医联体（徐汇）理事会",
+      "level": "alliance",
+      "parent_id": null,
+      "org_type": "alliance",
+      "campus": null
+    }
+  ],
+  "note": "机构关系为示例：院区隶属总院；区域医疗中心下设站点；医联体成员经医联体授权共享部分能力。"
+}

@@ -1,0 +1,973 @@
+{
+  "REQ-20260915-0001": {
+    "request": {
+      "request_uid": "REQ-20260915-0001",
+      "occurred_at": "2026-09-15T09:12:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0002",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-ND",
+          "M-OB",
+          "M-LB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": [
+          "FM-SJZT"
+        ]
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:6129399dfec36e5ec4b8a0167cd36aac55113d0f3e7e964178dee8b5ff624ac0",
+    "occurred_at": "2026-09-15T09:12:00+08:00",
+    "org_chain": [
+      "ORG-LH-XJH",
+      "ORG-LONGHUA"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0002",
+      "purposes": [
+        "clinical_decision_support",
+        "research"
+      ],
+      "disease_scope": [
+        "DIS-COPD",
+        "DIS-LC"
+      ],
+      "org_ids": [
+        "ORG-LONGHUA",
+        "ORG-LH-XJH"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-04-10T10:30:00+08:00",
+      "valid_until": "2028-04-10T10:30:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:d8e727df2c02b63fb0601166b6098506a5aedd4eb1887e109dab1ad3db53793e"
+    },
+    "routing": {
+      "version": "1.5.0",
+      "allowed_versions": [
+        "1.4.0",
+        "1.5.0"
+      ],
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001",
+        "EXP-LZH-002"
+      ],
+      "released_on": "2026-08-01",
+      "status": "active",
+      "routed_by": "stable:bucket=97>=10",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.5.0",
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [
+        "FM-YPGF"
+      ],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.7333,
+      "supported": true,
+      "rationale": "按1.5.0健脾优先规则，证属SYN-FHQF，命中主症4项；既往已用FM-SJZT而主症仍在，调整君药次序，依名医经验EXP-SCH-001建议：FM-YPGF",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.5",
+        "score_threshold": 0.6,
+        "primary_policy": "spleen_first",
+        "matched_key_manifestations": [
+          "M-LB",
+          "M-ND",
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.7667,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:bd037cd90ee51ccc256963785ce0bcc3be01d84fb27e99097955600e8a083cf9"
+    },
+    "status": "confirmed",
+    "rejection": null,
+    "disposition": {
+      "action": "confirmed",
+      "note": "遵模型建议，玉屏风散固表"
+    },
+    "duplicates": 1,
+    "ae_reports": []
+  },
+  "REQ-20260915-0002": {
+    "request": {
+      "request_uid": "REQ-20260915-0002",
+      "occurred_at": "2026-09-15T10:05:00+08:00",
+      "org_id": "ORG-LH-PD",
+      "clinic_role": "ROLE-RESIDENT",
+      "clinician_pseudonym": "D-BB07",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0001",
+      "disease_code": "DIS-LC",
+      "features": {
+        "syndrome_code": "SYN-FYXR",
+        "manifestation_codes": [
+          "M-DK",
+          "M-WXR",
+          "M-XS"
+        ],
+        "tongue_code": "T-HJ",
+        "pulse_code": "P-XS",
+        "age_band": "60-74",
+        "sex": "F"
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:bcaab5a218bd51ae2d1553ae7e12ce9a85cb01d97d6ac676345223eb27a27ad9",
+    "occurred_at": "2026-09-15T10:05:00+08:00",
+    "org_chain": [],
+    "consent_snapshot": null,
+    "routing": null,
+    "model_output": null,
+    "status": "rejected",
+    "rejection": {
+      "reason_code": "OUT_OF_DISEASE_SCOPE",
+      "reason": "机构 ORG-LH-PD 获准病种为 ['DIS-COPD']，不含 DIS-LC"
+    },
+    "disposition": null,
+    "duplicates": 0,
+    "ae_reports": []
+  },
+  "REQ-20260916-0003": {
+    "request": {
+      "request_uid": "REQ-20260916-0003",
+      "occurred_at": "2026-09-16T14:20:00+08:00",
+      "org_id": "ORG-PDTCM-CY",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-CC13",
+      "patient_pseudonym": "P-2D88E0",
+      "consent_id": "CON-2026-0004",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-OB",
+          "M-LB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": ">=75",
+        "sex": "M"
+      },
+      "offline": true,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:9a2ef789446216d69a4cbe0f914bf91f31f5e2b7be20f36ca782ef5cac7f57d5",
+    "occurred_at": "2026-09-16T14:20:00+08:00",
+    "org_chain": [
+      "ORG-PDTCM-CY",
+      "ORG-PDTCM"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0004",
+      "purposes": [
+        "clinical_decision_support"
+      ],
+      "disease_scope": [
+        "DIS-COPD"
+      ],
+      "org_ids": [
+        "ORG-PDTCM-CY",
+        "ORG-PDTCM"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-07-01T08:30:00+08:00",
+      "valid_until": "2027-07-01T08:30:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:a95c476eb0f8fb70a2363fc7d12281d45f37e3ccff93f8b8a28682e9d3824732"
+    },
+    "routing": {
+      "version": "1.4.0",
+      "allowed_versions": [
+        "1.4.0"
+      ],
+      "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001"
+      ],
+      "released_on": "2026-03-15",
+      "status": "active",
+      "routed_by": "approved",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.4.0",
+      "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [
+        "FM-YPGF",
+        "FM-SJZT"
+      ],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.75,
+      "supported": true,
+      "rationale": "按1.4.0固表优先规则，证属SYN-FHQF，命中主症3项，依名医经验EXP-SCH-001建议先固表后健脾：FM-YPGF,FM-SJZT",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.4",
+        "score_threshold": 0.5,
+        "primary_policy": "defense_first",
+        "matched_key_manifestations": [
+          "M-LB",
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.6,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:994732b3f5cc15da2eb0ab736b8c4fcaa0b259175dc4afb92111eea11f7a564c"
+    },
+    "status": "confirmed",
+    "rejection": null,
+    "disposition": {
+      "action": "confirmed",
+      "note": "站点按1.4方案执行"
+    },
+    "duplicates": 0,
+    "ae_reports": [
+      {
+        "severity": "serious",
+        "description_code": "AE-LIVER-FUNCTION"
+      }
+    ]
+  },
+  "REQ-20260918-0004": {
+    "request": {
+      "request_uid": "REQ-20260918-0004",
+      "occurred_at": "2026-09-18T15:00:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0001",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-ND",
+          "M-OB",
+          "M-LB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": [
+          "FM-SJZT"
+        ]
+      },
+      "offline": false,
+      "consultation_id": "CON-LH-XHCH-20260918-01",
+      "consultation_parties": [
+        "ORG-LH-XJH",
+        "ORG-XHCH"
+      ]
+    },
+    "request_digest": "sha256:74263af55152165c586ff5d65d2417748f8dffda386013d9bf2ca5ec2705695d",
+    "occurred_at": "2026-09-18T15:00:00+08:00",
+    "org_chain": [
+      "ORG-LH-XJH",
+      "ORG-LONGHUA"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0001",
+      "purposes": [
+        "clinical_decision_support"
+      ],
+      "disease_scope": [
+        "DIS-COPD"
+      ],
+      "org_ids": [
+        "ORG-LONGHUA",
+        "ORG-LH-XJH",
+        "ORG-LH-PD",
+        "ORG-LH-HK",
+        "ORG-LH-MH"
+      ],
+      "cross_org_consult": true,
+      "granted_on": "2026-03-01T09:00:00+08:00",
+      "valid_until": "2027-03-01T09:00:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:91d9fcb5f79339941d71ce6246d3047670317dbf67a3b86704f0ea4012e47413"
+    },
+    "routing": {
+      "version": "1.4.0",
+      "allowed_versions": [
+        "1.4.0"
+      ],
+      "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001"
+      ],
+      "released_on": "2026-03-15",
+      "status": "active",
+      "routed_by": "consultation:CON-LH-XHCH-20260918-01:common=['1.4.0']",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.4.0",
+      "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [
+        "FM-YPGF",
+        "FM-SJZT"
+      ],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.8334,
+      "supported": true,
+      "rationale": "按1.4.0固表优先规则，证属SYN-FHQF，命中主症4项，依名医经验EXP-SCH-001建议先固表后健脾：FM-YPGF,FM-SJZT",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.4",
+        "score_threshold": 0.5,
+        "primary_policy": "defense_first",
+        "matched_key_manifestations": [
+          "M-LB",
+          "M-ND",
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.7667,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:900e139f9c03b4c8378526cb90933fda57d844f04c8bf24970753905ec26fc24"
+    },
+    "status": "confirmed",
+    "rejection": null,
+    "disposition": {
+      "action": "confirmed",
+      "note": "会诊按共同版本执行"
+    },
+    "duplicates": 0,
+    "ae_reports": []
+  },
+  "REQ-20260912-0009": {
+    "request": {
+      "request_uid": "REQ-20260912-0009",
+      "occurred_at": "2026-09-12T10:00:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-000005",
+      "consent_id": "CON-2026-0005",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-OB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "40-59",
+        "sex": "M"
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:a7c15433841767cb8afac92f8daa67f961142766c953ff1ae56ad13fcdff15cf",
+    "occurred_at": "2026-09-12T10:00:00+08:00",
+    "org_chain": [
+      "ORG-LH-XJH",
+      "ORG-LONGHUA"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0005",
+      "purposes": [
+        "clinical_decision_support"
+      ],
+      "disease_scope": [
+        "DIS-COPD",
+        "DIS-LC"
+      ],
+      "org_ids": [
+        "ORG-LONGHUA",
+        "ORG-LH-XJH"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-09-01T08:00:00+08:00",
+      "valid_until": "2027-09-01T08:00:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:a0124cf162ddef3305a862d36a5ff20048bc23fee2e9601b70f605f65411b447"
+    },
+    "routing": {
+      "version": "1.6.0-rc1",
+      "allowed_versions": [
+        "1.4.0",
+        "1.5.0"
+      ],
+      "manifest_digest": "sha256:9f8e7d6c5b4a39281706f5e4d3c2b1a09988776655443322110f0e0d0c0b0a09",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001",
+        "EXP-LZH-002"
+      ],
+      "released_on": "2026-09-10",
+      "status": "candidate",
+      "routed_by": "canary:bucket=0<10",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.6.0-rc1",
+      "manifest_digest": "sha256:9f8e7d6c5b4a39281706f5e4d3c2b1a09988776655443322110f0e0d0c0b0a09",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.0,
+      "supported": false,
+      "rationale": "匹配度 0.4333 低于阈值 0.6 或本病本证无在册名医经验来源；按 flag_for_review 不输出方剂建议",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.6-rc",
+        "score_threshold": 0.6,
+        "primary_policy": "spleen_first",
+        "matched_key_manifestations": [
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.4333,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:656f5a9eaa082646d6ae2322041274b184605bbc16d489dcf320335d0abaf94f"
+    },
+    "status": "dismissed",
+    "rejection": null,
+    "disposition": {
+      "action": "dismissed",
+      "reason": "候选版建议依据不足，暂不采纳"
+    },
+    "duplicates": 0,
+    "ae_reports": []
+  },
+  "REQ-20260914-0010": {
+    "request": {
+      "request_uid": "REQ-20260914-0010",
+      "occurred_at": "2026-09-14T09:00:00+08:00",
+      "org_id": "ORG-PDTCM-CY",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-CC13",
+      "patient_pseudonym": "P-2D88E0",
+      "consent_id": "CON-2026-0004",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-OB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": ">=75",
+        "sex": "M"
+      },
+      "offline": true,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:0f6bdf10e1a2591be1cd6b2d8c3358890733248e73e180d12a83415ce4e3e886",
+    "occurred_at": "2026-09-14T09:00:00+08:00",
+    "org_chain": [
+      "ORG-PDTCM-CY",
+      "ORG-PDTCM"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0004",
+      "purposes": [
+        "clinical_decision_support"
+      ],
+      "disease_scope": [
+        "DIS-COPD"
+      ],
+      "org_ids": [
+        "ORG-PDTCM-CY",
+        "ORG-PDTCM"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-07-01T08:30:00+08:00",
+      "valid_until": "2027-07-01T08:30:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:a95c476eb0f8fb70a2363fc7d12281d45f37e3ccff93f8b8a28682e9d3824732"
+    },
+    "routing": {
+      "version": "1.4.0",
+      "allowed_versions": [
+        "1.4.0"
+      ],
+      "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001"
+      ],
+      "released_on": "2026-03-15",
+      "status": "active",
+      "routed_by": "approved",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.4.0",
+      "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.0,
+      "supported": false,
+      "rationale": "匹配度 0.4333 低于阈值 0.5 或本病本证无在册名医经验来源；按 no_recommendation 不输出方剂建议",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.4",
+        "score_threshold": 0.5,
+        "primary_policy": "defense_first",
+        "matched_key_manifestations": [
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.4333,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:45f8fe8395864322601a5c827c48630fd44abe3a94926e78fe3cac69dae5085a"
+    },
+    "status": "confirmed",
+    "rejection": null,
+    "disposition": {
+      "action": "confirmed",
+      "note": "补传后主治补确认"
+    },
+    "duplicates": 0,
+    "ae_reports": [
+      {
+        "severity": "serious",
+        "description_code": "AE-LIVER-FUNCTION"
+      }
+    ]
+  },
+  "REQ-20260905-0020": {
+    "request": {
+      "request_uid": "REQ-20260905-0020",
+      "occurred_at": "2026-09-05T11:00:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0002",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-ND",
+          "M-OB",
+          "M-LB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": [
+          "FM-SJZT"
+        ]
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:3a6a172830ab953f26f2ca8975aaf700f63e1b75a5ae60caa14b779cbd371f11",
+    "occurred_at": "2026-09-05T11:00:00+08:00",
+    "org_chain": [
+      "ORG-LH-XJH",
+      "ORG-LONGHUA"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0002",
+      "purposes": [
+        "clinical_decision_support",
+        "research"
+      ],
+      "disease_scope": [
+        "DIS-COPD",
+        "DIS-LC"
+      ],
+      "org_ids": [
+        "ORG-LONGHUA",
+        "ORG-LH-XJH"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-04-10T10:30:00+08:00",
+      "valid_until": "2028-04-10T10:30:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:d8e727df2c02b63fb0601166b6098506a5aedd4eb1887e109dab1ad3db53793e"
+    },
+    "routing": {
+      "version": "1.5.0",
+      "allowed_versions": [
+        "1.4.0",
+        "1.5.0"
+      ],
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001",
+        "EXP-LZH-002"
+      ],
+      "released_on": "2026-08-01",
+      "status": "active",
+      "routed_by": "stable:canary-not-released-until=2026-09-10",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.5.0",
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [
+        "FM-YPGF"
+      ],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.7333,
+      "supported": true,
+      "rationale": "按1.5.0健脾优先规则，证属SYN-FHQF，命中主症4项；既往已用FM-SJZT而主症仍在，调整君药次序，依名医经验EXP-SCH-001建议：FM-YPGF",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.5",
+        "score_threshold": 0.6,
+        "primary_policy": "spleen_first",
+        "matched_key_manifestations": [
+          "M-LB",
+          "M-ND",
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.7667,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:bd037cd90ee51ccc256963785ce0bcc3be01d84fb27e99097955600e8a083cf9"
+    },
+    "status": "confirmed",
+    "rejection": null,
+    "disposition": {
+      "action": "confirmed",
+      "note": "复诊守方"
+    },
+    "duplicates": 0,
+    "ae_reports": []
+  },
+  "REQ-20260919-0020": {
+    "request": {
+      "request_uid": "REQ-20260919-0020",
+      "occurred_at": "2026-09-19T11:00:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0002",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-ND",
+          "M-OB",
+          "M-LB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": [
+          "FM-SJZT"
+        ]
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:77090759c41ff130181955e93ed1e3e85e7706f81861c2daa764e3d7c16dbd80",
+    "occurred_at": "2026-09-19T11:00:00+08:00",
+    "org_chain": [
+      "ORG-LH-XJH",
+      "ORG-LONGHUA"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0002",
+      "purposes": [
+        "clinical_decision_support",
+        "research"
+      ],
+      "disease_scope": [
+        "DIS-COPD",
+        "DIS-LC"
+      ],
+      "org_ids": [
+        "ORG-LONGHUA",
+        "ORG-LH-XJH"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-04-10T10:30:00+08:00",
+      "valid_until": "2028-04-10T10:30:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:d8e727df2c02b63fb0601166b6098506a5aedd4eb1887e109dab1ad3db53793e"
+    },
+    "routing": {
+      "version": "1.5.0",
+      "allowed_versions": [
+        "1.4.0",
+        "1.5.0"
+      ],
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001",
+        "EXP-LZH-002"
+      ],
+      "released_on": "2026-08-01",
+      "status": "active",
+      "routed_by": "stable:bucket=97>=10",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.5.0",
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [
+        "FM-YPGF"
+      ],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.7333,
+      "supported": true,
+      "rationale": "按1.5.0健脾优先规则，证属SYN-FHQF，命中主症4项；既往已用FM-SJZT而主症仍在，调整君药次序，依名医经验EXP-SCH-001建议：FM-YPGF",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.5",
+        "score_threshold": 0.6,
+        "primary_policy": "spleen_first",
+        "matched_key_manifestations": [
+          "M-LB",
+          "M-ND",
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.7667,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:bd037cd90ee51ccc256963785ce0bcc3be01d84fb27e99097955600e8a083cf9"
+    },
+    "status": "confirmed",
+    "rejection": null,
+    "disposition": {
+      "action": "confirmed",
+      "note": "复诊守方"
+    },
+    "duplicates": 0,
+    "ae_reports": []
+  },
+  "REQ-20260920-0011": {
+    "request": {
+      "request_uid": "REQ-20260920-0011",
+      "occurred_at": "2026-09-20T09:00:00+08:00",
+      "org_id": "ORG-PDTCM-CY",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-CC13",
+      "patient_pseudonym": "P-2D88E0",
+      "consent_id": "CON-2026-0004",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-OB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": ">=75",
+        "sex": "M"
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    "request_digest": "sha256:95b4ea95a4d200f778e3618958dc817d302312e9cfd0260c834d0fc878435f5b",
+    "occurred_at": "2026-09-20T09:00:00+08:00",
+    "org_chain": [],
+    "consent_snapshot": null,
+    "routing": null,
+    "model_output": null,
+    "status": "rejected",
+    "rejection": {
+      "reason_code": "VERSION_STOPPED",
+      "reason": "版本 1.4.0 已于 2026-09-19T09:10:00+08:00 停用：严重不良结果达 2 例（阈值 2），自动停用"
+    },
+    "disposition": null,
+    "duplicates": 0,
+    "ae_reports": []
+  },
+  "REQ-20260921-0012": {
+    "request": {
+      "request_uid": "REQ-20260921-0012",
+      "occurred_at": "2026-09-21T10:00:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0001",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": [
+          "M-SF",
+          "M-ND",
+          "M-OB",
+          "M-LB"
+        ],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": [
+          "FM-SJZT"
+        ]
+      },
+      "offline": false,
+      "consultation_id": "CON-LH-XHCH-20260918-01",
+      "consultation_parties": [
+        "ORG-LH-XJH",
+        "ORG-XHCH"
+      ]
+    },
+    "request_digest": "sha256:f5716cd31b754ace02caac76b39be542964a71eb2a8d51f13a0e4b3d4c99c782",
+    "occurred_at": "2026-09-21T10:00:00+08:00",
+    "org_chain": [],
+    "consent_snapshot": null,
+    "routing": null,
+    "model_output": null,
+    "status": "rejected",
+    "rejection": {
+      "reason_code": "CONSENT_DENIED",
+      "reason": "授权 CON-2026-0001 已撤回（EVT-20260926-0028）"
+    },
+    "disposition": null,
+    "duplicates": 0,
+    "ae_reports": []
+  }
+}

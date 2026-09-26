@@ -1,0 +1,63 @@
+{
+  "dataset": "DS-COPD-OUTCOME",
+  "ethics_ref": "伦理2026-052",
+  "k": 3,
+  "rows": [
+    {
+      "research_pseudonym": "R-A91316104ED9",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "final_formula_codes": [
+        "FM-YPGF"
+      ],
+      "doctor_action": "confirmed",
+      "model_version": "1.5.0",
+      "age_band": "60-74",
+      "sex": "F",
+      "visit_month": "2026-09"
+    },
+    {
+      "research_pseudonym": "R-A91316104ED9",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "final_formula_codes": [
+        "FM-YPGF"
+      ],
+      "doctor_action": "confirmed",
+      "model_version": "1.5.0",
+      "age_band": "60-74",
+      "sex": "F",
+      "visit_month": "2026-09"
+    },
+    {
+      "research_pseudonym": "R-A91316104ED9",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "final_formula_codes": [
+        "FM-YPGF"
+      ],
+      "doctor_action": "confirmed",
+      "model_version": "1.5.0",
+      "age_band": "60-74",
+      "sex": "F",
+      "visit_month": "2026-09"
+    }
+  ],
+  "included": 3,
+  "suppressed_groups": [],
+  "skipped": [
+    {
+      "request_uid": "REQ-20260916-0003",
+      "reason": "授权 CON-2026-0004 不含有效科研用途"
+    },
+    {
+      "request_uid": "REQ-20260918-0004",
+      "reason": "授权 CON-2026-0001 已撤回（EVT-20260926-0028）"
+    },
+    {
+      "request_uid": "REQ-20260914-0010",
+      "reason": "授权 CON-2026-0004 不含有效科研用途"
+    }
+  ],
+  "reidentification_allowed": false
+}

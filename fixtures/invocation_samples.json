@@ -1,0 +1,97 @@
+{
+  "schema": "tcm-audit/invocation-samples/v1",
+  "note": "全部为虚构调用样例。同一位患者、同一时刻输入在 1.4.0 与 1.5.0 下得到不同建议，用于演示审计重放与版本差异解释。",
+  "requests": [
+    {
+      "request_uid": "REQ-20260915-0001",
+      "occurred_at": "2026-09-15T09:12:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0002",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": ["M-SF", "M-ND", "M-OB", "M-LB"],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": ["FM-SJZT"]
+      },
+      "offline": false,
+      "consultation_id": null
+    },
+    {
+      "request_uid": "REQ-20260915-0002",
+      "occurred_at": "2026-09-15T10:05:00+08:00",
+      "org_id": "ORG-LH-PD",
+      "clinic_role": "ROLE-RESIDENT",
+      "clinician_pseudonym": "D-BB07",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0001",
+      "disease_code": "DIS-LC",
+      "features": {
+        "syndrome_code": "SYN-FYXR",
+        "manifestation_codes": ["M-DK", "M-WXR", "M-XS"],
+        "tongue_code": "T-HJ",
+        "pulse_code": "P-XS",
+        "age_band": "60-74",
+        "sex": "F"
+      },
+      "offline": false,
+      "consultation_id": null,
+      "expect_rejection": "OUT_OF_DISEASE_SCOPE",
+      "expect_rejection_reason": "浦东院区获准病种仅含 DIS-COPD，肺癌请求必须驳回"
+    },
+    {
+      "request_uid": "REQ-20260916-0003",
+      "occurred_at": "2026-09-16T14:20:00+08:00",
+      "org_id": "ORG-PDTCM-CY",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-CC13",
+      "patient_pseudonym": "P-2D88E0",
+      "consent_id": "CON-2026-0004",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": ["M-SF", "M-OB", "M-LB"],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": ">=75",
+        "sex": "M"
+      },
+      "offline": true,
+      "consultation_id": null,
+      "captured_at_offline_note": "站点断网期间本地采集，恢复后补传；occurred_at 为实际就诊时刻"
+    },
+    {
+      "request_uid": "REQ-20260918-0004",
+      "occurred_at": "2026-09-18T15:00:00+08:00",
+      "org_id": "ORG-LH-XJH",
+      "clinic_role": "ROLE-ATTENDING",
+      "clinician_pseudonym": "D-AA01",
+      "patient_pseudonym": "P-7F3A21",
+      "consent_id": "CON-2026-0001",
+      "disease_code": "DIS-COPD",
+      "features": {
+        "syndrome_code": "SYN-FHQF",
+        "manifestation_codes": ["M-SF", "M-ND", "M-OB", "M-LB"],
+        "tongue_code": "T-DH",
+        "pulse_code": "P-XR",
+        "age_band": "60-74",
+        "sex": "F",
+        "prior_formula_codes": ["FM-SJZT"]
+      },
+      "offline": false,
+      "consultation_id": "CON-LH-XHCH-20260918-01",
+      "consultation_parties": ["ORG-LH-XJH", "ORG-XHCH"]
+    },
+    {
+      "request_uid": "REQ-20260915-0001-DUP",
+      "duplicate_of": "REQ-20260915-0001",
+      "note": "网络重试产生的重复请求，必须返回首次结果，不得产生第二条建议或第二条费用/事件链分叉。"
+    }
+  ]
+}

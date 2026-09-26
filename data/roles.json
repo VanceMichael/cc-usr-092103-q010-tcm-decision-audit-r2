@@ -1,0 +1,63 @@
+{
+  "schema": "tcm-audit/roles/v1",
+  "updated_at": "2026-09-01",
+  "permissions": [
+    {"code": "PERM-CLINIC-INVOKE", "name": "发起临床辅助推理请求"},
+    {"code": "PERM-CLINIC-CONFIRM", "name": "确认/修订/驳回模型建议"},
+    {"code": "PERM-AUDIT-READ", "name": "查阅审计重放记录"},
+    {"code": "PERM-REG-VERSION", "name": "登记模型版本与适用范围"},
+    {"code": "PERM-REG-APPROVE", "name": "批准机构启用/停用版本"},
+    {"code": "PERM-CONSULT-INVITE", "name": "发起跨院会诊"},
+    {"code": "PERM-AE-REPORT", "name": "上报不良结果"},
+    {"code": "PERM-RESEARCH-EXPORT", "name": "申请/执行科研导出"},
+    {"code": "PERM-CONSENT-WITHDRAW", "name": "受理并记录授权撤回"},
+    {"code": "PERM-PATIENT-VIEW", "name": "调阅患者端可见内容（患者本人）"}
+  ],
+  "roles": [
+    {
+      "code": "ROLE-ATTENDING",
+      "name": "主治及以上中医师",
+      "permissions": ["PERM-CLINIC-INVOKE", "PERM-CLINIC-CONFIRM", "PERM-CONSULT-INVITE", "PERM-AE-REPORT"]
+    },
+    {
+      "code": "ROLE-RESIDENT",
+      "name": "住院中医师",
+      "permissions": ["PERM-CLINIC-INVOKE", "PERM-AE-REPORT"]
+    },
+    {
+      "code": "ROLE-AUDITOR",
+      "name": "机构内审/质控审计人员",
+      "permissions": ["PERM-AUDIT-READ"]
+    },
+    {
+      "code": "ROLE-MODEL-ADMIN",
+      "name": "模型登记管理员",
+      "permissions": ["PERM-REG-VERSION"]
+    },
+    {
+      "code": "ROLE-MEDICAL-ADMIN",
+      "name": "医务处（机构授权审批人）",
+      "permissions": ["PERM-REG-APPROVE", "PERM-AUDIT-READ", "PERM-AE-REPORT"]
+    },
+    {
+      "code": "ROLE-RESEARCHER",
+      "name": "科研人员（伦理批件范围内）",
+      "permissions": ["PERM-RESEARCH-EXPORT"]
+    },
+    {
+      "code": "ROLE-CONSULT-DESK",
+      "name": "患者服务/授权受理岗",
+      "permissions": ["PERM-CONSENT-WITHDRAW"]
+    },
+    {
+      "code": "ROLE-PATIENT",
+      "name": "患者本人",
+      "permissions": ["PERM-PATIENT-VIEW", "PERM-CONSENT-WITHDRAW"]
+    }
+  ],
+  "rules": {
+    "confirm_requires_attending": "建议确认/修订/驳回必须由 ROLE-ATTENDING 执行；住院医发起的请求须由主治确认后才可进入患者端。",
+    "scoped_to_membership": "任何角色仅在其所属机构及该机构覆盖范围内生效，跨院操作须另有会诊授权。",
+    "separation_of_duty": "ROLE-MODEL-ADMIN 仅可登记，不可批准启用；批准权属于 ROLE-MEDICAL-ADMIN。"
+  }
+}

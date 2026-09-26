@@ -1,0 +1,69 @@
+{
+  "schema": "tcm-audit/formulary-pattern/v1",
+  "updated_at": "2026-09-01",
+  "syndromes": [
+    {
+      "code": "SYN-FHQF",
+      "name": "肺脾气虚证",
+      "disease_codes": ["DIS-COPD", "DIS-LC"],
+      "key_manifestation_codes": ["M-SF", "M-ND", "M-OB", "M-LB", "T-DH", "P-XR"],
+      "treatment_principle_codes": ["TP-BF"]
+    },
+    {
+      "code": "SYN-FYXR",
+      "name": "肺热阴虚证",
+      "disease_codes": ["DIS-LC"],
+      "key_manifestation_codes": ["M-DK", "M-WXR", "M-XS", "T-HJ", "P-XS"],
+      "treatment_principle_codes": ["TP-YQ"]
+    }
+  ],
+  "diseases": [
+    {"code": "DIS-COPD", "name": "肺胀", "western_name": "慢性阻塞性肺疾病稳定期"},
+    {"code": "DIS-LC", "name": "肺癌", "western_name": "原发性支气管肺癌"}
+  ],
+  "treatment_principles": [
+    {"code": "TP-BF", "name": "补脾益肺，培土生金"},
+    {"code": "TP-YQ", "name": "益气养阴，清肺解毒"}
+  ],
+  "formulas": [
+    {"code": "FM-YPGF", "name": "玉屏风散", "composition": ["黄芪", "白术", "防风"]},
+    {"code": "FM-SJZT", "name": "四君子汤", "composition": ["党参", "白术", "茯苓", "炙甘草"]},
+    {"code": "FM-SM", "name": "沙参麦冬汤加减", "composition": ["北沙参", "麦冬", "玉竹", "桑叶", "白花蛇舌草"]}
+  ],
+  "manifestations": [
+    {"code": "M-SF", "name": "神疲乏力"},
+    {"code": "M-ND", "name": "纳呆便溏"},
+    {"code": "M-OB", "name": "气短而喘"},
+    {"code": "M-LB", "name": "自汗易感冒"},
+    {"code": "M-DK", "name": "口干少津"},
+    {"code": "M-WXR", "name": "五心烦热"},
+    {"code": "M-XS", "name": "消瘦"},
+    {"code": "T-DH", "name": "舌淡胖、苔薄白"},
+    {"code": "T-HJ", "name": "舌红少津、苔少"},
+    {"code": "P-XR", "name": "脉细弱"},
+    {"code": "P-XS", "name": "脉细数"}
+  ],
+  "master_experience_sources": [
+    {
+      "code": "EXP-SCH-001",
+      "master_name": "邵长荣",
+      "title": "慢阻肺稳定期肺脾气虚证的培土生金治法",
+      "evidence_level": "名老中医经验整理",
+      "published_ref": "《邵长荣内科临床经验》2018",
+      "formula_codes": ["FM-YPGF", "FM-SJZT"],
+      "disease_codes": ["DIS-COPD"],
+      "syndrome_codes": ["SYN-FHQF"]
+    },
+    {
+      "code": "EXP-LZH-002",
+      "master_name": "刘嘉湘",
+      "title": "肺癌扶正法：益气养阴、清肺解毒",
+      "evidence_level": "名老中医经验整理结合临床研究",
+      "published_ref": "中医扶正法治疗肺癌经验集 2020",
+      "formula_codes": ["FM-SM"],
+      "disease_codes": ["DIS-LC"],
+      "syndrome_codes": ["SYN-FYXR"]
+    }
+  ],
+  "note": "虚构示例资料，仅用于审计系统演示，不用于实际诊疗。"
+}

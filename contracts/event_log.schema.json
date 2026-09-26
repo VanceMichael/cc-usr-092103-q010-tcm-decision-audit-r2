@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "审计事件（哈希链）",
+  "type": "object",
+  "required": ["seq", "event_id", "event_type", "occurred_at", "recorded_at",
+               "actor", "org_id", "payload", "prev_hash", "hash"],
+  "properties": {
+    "seq": {"type": "integer", "minimum": 1},
+    "event_id": {"type": "string"},
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "REQUEST_ACCEPTED", "REQUEST_REJECTED", "REQUEST_DEDUP",
+        "MODEL_OUTPUT",
+        "CLINICIAN_CONFIRMED", "CLINICIAN_REVISED", "CLINICIAN_DISMISSED",
+        "ADVERSE_OUTCOME", "VERSION_STOPPED",
+        "CONSENT_WITHDRAWN",
+        "RESEARCH_EXPORT", "RESEARCH_EXPORT_DENIED"
+      ]
+    },
+    "occurred_at": {"type": "string"},
+    "recorded_at": {"type": "string"},
+    "actor": {
+      "type": "object",
+      "required": ["role"],
+      "properties": {"role": {"type": "string"}, "pseudonym": {"type": "string"}},
+      "additionalProperties": false
+    },
+    "org_id": {"type": ["string", "null"]},
+    "payload": {"type": "object"},
+    "prev_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false,
+  "note": "事件只增不改不删；hash=sha256(规范化后的其余字段)，prev_hash 指向上一条，任何篡改都会使 verify() 失败。"
+}

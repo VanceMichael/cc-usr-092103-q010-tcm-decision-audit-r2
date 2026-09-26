@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "临床决定审计记录",
+  "type": "object",
+  "required": ["request", "request_digest", "occurred_at", "org_chain",
+               "consent_snapshot", "routing", "model_output", "status"],
+  "properties": {
+    "request": {"$ref": "minimal_features.schema.json"},
+    "request_digest": {"type": "string"},
+    "occurred_at": {"type": "string"},
+    "org_chain": {"type": "array", "items": {"type": "string"}},
+    "consent_snapshot": {"type": ["object", "null"]},
+    "routing": {"type": ["object", "null"]},
+    "model_output": {
+      "type": ["object", "null"],
+      "properties": {
+        "kind": {"const": "model_output"},
+        "model_version": {"type": "string"},
+        "recommended_formula_codes": {"type": "array", "items": {"type": "string"}},
+        "doctor_final_formula_codes": {
+          "type": "array",
+          "description": "不存在该字段：医生处置只存在于 disposition 事件中，禁止并入模型输出"
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["rejected", "output_ready", "confirmed", "revised", "dismissed"]
+    },
+    "rejection": {"type": ["object", "null"]},
+    "disposition": {"type": ["object", "null"]},
+    "duplicates": {"type": "integer", "minimum": 0},
+    "ae_reports": {"type": "array"}
+  },
+  "additionalProperties": false,
+  "note": "model_output 与 disposition 分列；患者端只读取 disposition 已确认部分。"
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "org_id": "ORG-LH-XJH",
+    "visit_occurred_at": "2026-09-05T11:00:00+08:00",
+    "disease": "肺胀",
+    "syndrome": "肺脾气虚证",
+    "treatment_principle": [
+      "补脾益肺，培土生金"
+    ],
+    "doctor_final_formulas": [
+      "玉屏风散"
+    ],
+    "doctor_note": "复诊守方",
+    "confirmed_by_doctor": true,
+    "source": "医生确认的最终处置"
+  },
+  {
+    "org_id": "ORG-LH-XJH",
+    "visit_occurred_at": "2026-09-15T09:12:00+08:00",
+    "disease": "肺胀",
+    "syndrome": "肺脾气虚证",
+    "treatment_principle": [
+      "补脾益肺，培土生金"
+    ],
+    "doctor_final_formulas": [
+      "玉屏风散"
+    ],
+    "doctor_note": "遵模型建议，玉屏风散固表",
+    "confirmed_by_doctor": true,
+    "source": "医生确认的最终处置"
+  },
+  {
+    "org_id": "ORG-LH-XJH",
+    "visit_occurred_at": "2026-09-18T15:00:00+08:00",
+    "disease": "肺胀",
+    "syndrome": "肺脾气虚证",
+    "treatment_principle": [
+      "补脾益肺，培土生金"
+    ],
+    "doctor_final_formulas": [
+      "玉屏风散",
+      "四君子汤"
+    ],
+    "doctor_note": "会诊按共同版本执行",
+    "confirmed_by_doctor": true,
+    "source": "医生确认的最终处置"
+  },
+  {
+    "org_id": "ORG-LH-XJH",
+    "visit_occurred_at": "2026-09-19T11:00:00+08:00",
+    "disease": "肺胀",
+    "syndrome": "肺脾气虚证",
+    "treatment_principle": [
+      "补脾益肺，培土生金"
+    ],
+    "doctor_final_formulas": [
+      "玉屏风散"
+    ],
+    "doctor_note": "复诊守方",
+    "confirmed_by_doctor": true,
+    "source": "医生确认的最终处置"
+  }
+]

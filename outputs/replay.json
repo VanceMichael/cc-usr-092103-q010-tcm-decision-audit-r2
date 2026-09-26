@@ -1,0 +1,236 @@
+{
+  "replay": {
+    "request_uid": "REQ-20260915-0001",
+    "replay_status": "matches",
+    "stored_request_digest": "sha256:6129399dfec36e5ec4b8a0167cd36aac55113d0f3e7e964178dee8b5ff624ac0",
+    "request_now_digest": "sha256:6129399dfec36e5ec4b8a0167cd36aac55113d0f3e7e964178dee8b5ff624ac0",
+    "org_chain": [
+      "ORG-LH-XJH",
+      "ORG-LONGHUA"
+    ],
+    "consent_snapshot": {
+      "consent_id": "CON-2026-0002",
+      "purposes": [
+        "clinical_decision_support",
+        "research"
+      ],
+      "disease_scope": [
+        "DIS-COPD",
+        "DIS-LC"
+      ],
+      "org_ids": [
+        "ORG-LONGHUA",
+        "ORG-LH-XJH"
+      ],
+      "cross_org_consult": false,
+      "granted_on": "2026-04-10T10:30:00+08:00",
+      "valid_until": "2028-04-10T10:30:00+08:00",
+      "withdrawn": false,
+      "snapshot_digest": "sha256:d8e727df2c02b63fb0601166b6098506a5aedd4eb1887e109dab1ad3db53793e"
+    },
+    "routing": {
+      "version": "1.5.0",
+      "allowed_versions": [
+        "1.4.0",
+        "1.5.0"
+      ],
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "experience_source_codes": [
+        "EXP-SCH-001",
+        "EXP-LZH-002"
+      ],
+      "released_on": "2026-08-01",
+      "status": "active",
+      "routed_by": "stable:bucket=97>=10",
+      "stopped": null,
+      "released_before_request": true
+    },
+    "model_output": {
+      "kind": "model_output",
+      "model_uid": "model-fz-assist",
+      "model_version": "1.5.0",
+      "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+      "terminology_version": "tcm-audit/formulary-pattern/v1",
+      "disease_code": "DIS-COPD",
+      "syndrome_code": "SYN-FHQF",
+      "recommended_formula_codes": [
+        "FM-YPGF"
+      ],
+      "treatment_principle_codes": [
+        "TP-BF"
+      ],
+      "confidence": 0.7333,
+      "supported": true,
+      "rationale": "按1.5.0健脾优先规则，证属SYN-FHQF，命中主症4项；既往已用FM-SJZT而主症仍在，调整君药次序，依名医经验EXP-SCH-001建议：FM-YPGF",
+      "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+      "rule_trace": {
+        "rule_set": "rules-fz-1.5",
+        "score_threshold": 0.6,
+        "primary_policy": "spleen_first",
+        "matched_key_manifestations": [
+          "M-LB",
+          "M-ND",
+          "M-OB",
+          "M-SF"
+        ],
+        "tongue_hit": true,
+        "pulse_hit": true,
+        "match_score": 0.7667,
+        "experience_source_codes": [
+          "EXP-SCH-001"
+        ],
+        "candidate_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ]
+      },
+      "output_digest": "sha256:bd037cd90ee51ccc256963785ce0bcc3be01d84fb27e99097955600e8a083cf9"
+    },
+    "replay_output_digest": "sha256:bd037cd90ee51ccc256963785ce0bcc3be01d84fb27e99097955600e8a083cf9",
+    "doctor_disposition": {
+      "action": "confirmed",
+      "note": "遵模型建议，玉屏风散固表"
+    },
+    "decision_status": "confirmed",
+    "adverse_outcomes": [],
+    "model_vs_doctor": {
+      "model_recommended": [
+        "FM-YPGF"
+      ],
+      "doctor_final": [
+        "FM-YPGF"
+      ],
+      "doctor_action": "confirmed",
+      "identical": true
+    },
+    "chain_verified": true
+  },
+  "version_comparison": {
+    "request_uid": "REQ-20260915-0001",
+    "actual_input_digest": "sha256:6129399dfec36e5ec4b8a0167cd36aac55113d0f3e7e964178dee8b5ff624ac0",
+    "base_version": "1.4.0",
+    "outputs": {
+      "1.4.0": {
+        "kind": "model_output",
+        "model_uid": "model-fz-assist",
+        "model_version": "1.4.0",
+        "manifest_digest": "sha256:8c4f9a20d13d4a3e9b7c6a504f3e2d1c0b9a8877665544332211001122334455",
+        "terminology_version": "tcm-audit/formulary-pattern/v1",
+        "disease_code": "DIS-COPD",
+        "syndrome_code": "SYN-FHQF",
+        "recommended_formula_codes": [
+          "FM-YPGF",
+          "FM-SJZT"
+        ],
+        "treatment_principle_codes": [
+          "TP-BF"
+        ],
+        "confidence": 0.8334,
+        "supported": true,
+        "rationale": "按1.4.0固表优先规则，证属SYN-FHQF，命中主症4项，依名医经验EXP-SCH-001建议先固表后健脾：FM-YPGF,FM-SJZT",
+        "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+        "rule_trace": {
+          "rule_set": "rules-fz-1.4",
+          "score_threshold": 0.5,
+          "primary_policy": "defense_first",
+          "matched_key_manifestations": [
+            "M-LB",
+            "M-ND",
+            "M-OB",
+            "M-SF"
+          ],
+          "tongue_hit": true,
+          "pulse_hit": true,
+          "match_score": 0.7667,
+          "experience_source_codes": [
+            "EXP-SCH-001"
+          ],
+          "candidate_formula_codes": [
+            "FM-YPGF",
+            "FM-SJZT"
+          ]
+        },
+        "output_digest": "sha256:900e139f9c03b4c8378526cb90933fda57d844f04c8bf24970753905ec26fc24"
+      },
+      "1.5.0": {
+        "kind": "model_output",
+        "model_uid": "model-fz-assist",
+        "model_version": "1.5.0",
+        "manifest_digest": "sha256:1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809",
+        "terminology_version": "tcm-audit/formulary-pattern/v1",
+        "disease_code": "DIS-COPD",
+        "syndrome_code": "SYN-FHQF",
+        "recommended_formula_codes": [
+          "FM-YPGF"
+        ],
+        "treatment_principle_codes": [
+          "TP-BF"
+        ],
+        "confidence": 0.7333,
+        "supported": true,
+        "rationale": "按1.5.0健脾优先规则，证属SYN-FHQF，命中主症4项；既往已用FM-SJZT而主症仍在，调整君药次序，依名医经验EXP-SCH-001建议：FM-YPGF",
+        "advisory": "模型建议，仅供中医师参考；不构成处方，最终处置以主治医生确认为准",
+        "rule_trace": {
+          "rule_set": "rules-fz-1.5",
+          "score_threshold": 0.6,
+          "primary_policy": "spleen_first",
+          "matched_key_manifestations": [
+            "M-LB",
+            "M-ND",
+            "M-OB",
+            "M-SF"
+          ],
+          "tongue_hit": true,
+          "pulse_hit": true,
+          "match_score": 0.7667,
+          "experience_source_codes": [
+            "EXP-SCH-001"
+          ],
+          "candidate_formula_codes": [
+            "FM-YPGF",
+            "FM-SJZT"
+          ]
+        },
+        "output_digest": "sha256:bd037cd90ee51ccc256963785ce0bcc3be01d84fb27e99097955600e8a083cf9"
+      }
+    },
+    "differences": {
+      "1.5.0": {
+        "recommended_formula_codes": {
+          "base": [
+            "FM-YPGF",
+            "FM-SJZT"
+          ],
+          "other": [
+            "FM-YPGF"
+          ]
+        },
+        "confidence": {
+          "base": 0.8334,
+          "other": 0.7333
+        },
+        "rule_change": {
+          "base_rule_set": "rules-fz-1.4",
+          "other_rule_set": "rules-fz-1.5",
+          "base_threshold": 0.5,
+          "other_threshold": 0.6,
+          "base_policy": "defense_first",
+          "other_policy": "spleen_first"
+        },
+        "experience_sources": {
+          "base": [
+            "EXP-SCH-001"
+          ],
+          "other": [
+            "EXP-SCH-001"
+          ]
+        }
+      }
+    },
+    "doctor_disposition": {
+      "action": "confirmed",
+      "note": "遵模型建议，玉屏风散固表"
+    }
+  }
+}

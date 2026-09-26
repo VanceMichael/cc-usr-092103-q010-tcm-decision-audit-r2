@@ -1,0 +1,91 @@
+{
+  "schema": "tcm-audit/consents/v1",
+  "updated_at": "2026-09-20",
+  "patients": [
+    {
+      "pseudonym": "P-7F3A21",
+      "salt_id": "salt-clinical-2026",
+      "consents": [
+        {
+          "consent_id": "CON-2026-0001",
+          "purposes": ["clinical_decision_support"],
+          "disease_scope": ["DIS-COPD"],
+          "org_ids": ["ORG-LONGHUA", "ORG-LH-XJH", "ORG-LH-PD", "ORG-LH-HK", "ORG-LH-MH"],
+          "cross_org_consult": true,
+          "granted_on": "2026-03-01T09:00:00+08:00",
+          "valid_until": "2027-03-01T09:00:00+08:00",
+          "status": "granted",
+          "withdrawn_event_id": null
+        },
+        {
+          "consent_id": "CON-2026-0002",
+          "purposes": ["clinical_decision_support", "research"],
+          "disease_scope": ["DIS-COPD", "DIS-LC"],
+          "org_ids": ["ORG-LONGHUA", "ORG-LH-XJH"],
+          "cross_org_consult": false,
+          "granted_on": "2026-04-10T10:30:00+08:00",
+          "valid_until": "2028-04-10T10:30:00+08:00",
+          "research_scope": {
+            "ethics_ref": "伦理2026-052",
+            "datasets": ["DS-COPD-OUTCOME"],
+            "reidentification_allowed": false
+          },
+          "status": "granted",
+          "withdrawn_event_id": null
+        }
+      ]
+    },
+    {
+      "pseudonym": "P-9C10B4",
+      "salt_id": "salt-clinical-2026",
+      "consents": [
+        {
+          "consent_id": "CON-2026-0003",
+          "purposes": ["clinical_decision_support"],
+          "disease_scope": ["DIS-LC"],
+          "org_ids": ["ORG-LONGHUA", "ORG-LH-XJH"],
+          "cross_org_consult": true,
+          "granted_on": "2026-05-20T14:00:00+08:00",
+          "valid_until": "2027-05-20T14:00:00+08:00",
+          "status": "withdrawn",
+          "withdrawn_event_id": "EVT-2026-0912-0007"
+        }
+      ]
+    },
+    {
+      "pseudonym": "P-000005",
+      "salt_id": "salt-clinical-2026",
+      "consents": [
+        {
+          "consent_id": "CON-2026-0005",
+          "purposes": ["clinical_decision_support"],
+          "disease_scope": ["DIS-COPD", "DIS-LC"],
+          "org_ids": ["ORG-LONGHUA", "ORG-LH-XJH"],
+          "cross_org_consult": false,
+          "granted_on": "2026-09-01T08:00:00+08:00",
+          "valid_until": "2027-09-01T08:00:00+08:00",
+          "status": "granted",
+          "withdrawn_event_id": null
+        }
+      ]
+    },
+    {
+      "pseudonym": "P-2D88E0",
+      "salt_id": "salt-clinical-2026",
+      "consents": [
+        {
+          "consent_id": "CON-2026-0004",
+          "purposes": ["clinical_decision_support"],
+          "disease_scope": ["DIS-COPD"],
+          "org_ids": ["ORG-PDTCM-CY", "ORG-PDTCM"],
+          "cross_org_consult": false,
+          "granted_on": "2026-07-01T08:30:00+08:00",
+          "valid_until": "2027-07-01T08:30:00+08:00",
+          "status": "granted",
+          "withdrawn_event_id": null
+        }
+      ]
+    }
+  ],
+  "note": "pseudonym 为化名，不含身份信息；salt_id 指向单独保管的盐值，化名不可由日志反向还原。科研用途须另有伦理批件与数据集范围。"
+}

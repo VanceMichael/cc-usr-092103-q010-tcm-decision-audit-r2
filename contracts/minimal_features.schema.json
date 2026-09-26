@@ -1,0 +1,37 @@
+{
+  "schema": "tcm-audit/minimal-features/v1",
+  "title": "推理请求最少必要特征契约",
+  "type": "object",
+  "required": ["request_uid", "occurred_at", "org_id", "clinic_role", "consent_id", "disease_code", "features"],
+  "properties": {
+    "request_uid": {"type": "string", "description": "调用方生成的幂等键，全局唯一，重复请求据此去重"},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "org_id": {"type": "string"},
+    "clinic_role": {"type": "string", "enum": ["ROLE-ATTENDING", "ROLE-RESIDENT"]},
+    "clinician_pseudonym": {"type": "string", "description": "医生化名，禁止真实姓名/工号明文"},
+    "consent_id": {"type": "string"},
+    "patient_pseudonym": {"type": "string", "description": "化名；禁止姓名、身份证、手机号、住院号"},
+    "disease_code": {"type": "string"},
+    "features": {
+      "type": "object",
+      "required": ["syndrome_code", "manifestation_codes"],
+      "properties": {
+        "syndrome_code": {"type": "string"},
+        "manifestation_codes": {"type": "array", "items": {"type": "string"}},
+        "tongue_code": {"type": "string"},
+        "pulse_code": {"type": "string"},
+        "age_band": {"type": "string", "enum": ["<40", "40-59", "60-74", ">=75"]},
+        "sex": {"type": "string", "enum": ["F", "M", "U"]},
+        "prior_formula_codes": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "offline": {"type": "boolean", "description": "true 表示离线补传，按 occurred_at 路由版本"},
+    "consultation_id": {"type": ["string", "null"], "description": "跨院会诊标识；非空时使用会诊共同批准版本"},
+    "consultation_parties": {"type": "array", "items": {"type": "string"}, "description": "会诊各方机构标识，仅用于求共同批准版本"},
+    "idempotency_key": {"type": "string", "description": "与 request_uid 等价的客户端去重键（可选）"}
+  },
+  "additionalProperties": false,
+  "forbidden_fields": ["真实姓名", "身份证号", "手机号", "住址", "住院号/门诊号明文", "工作单位", "基因序列", "详细病史自由文本"],
+  "note": "只允许方证术语编码与年龄段等粗粒度特征；命中禁止字段必须在入库前拒绝。"
+}
